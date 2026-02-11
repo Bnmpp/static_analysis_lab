@@ -1,0 +1,7 @@
+{
+    "typescript.tsserver.nodePath": "/home/vscode/.nvm/vesion/node/v12.22.9/bin/node",
+    "sonarlint.connectedMode.project": {
+        "connectionId": "bnmpp",
+        "projectKey": "Bnmpp_static_analysis_lab"
+    }
+}

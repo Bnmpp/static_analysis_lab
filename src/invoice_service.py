@@ -96,7 +96,7 @@ class InvoiceService:
 
     def _compute_discount(self, inv: Invoice, subtotal: float, warnings: List[str]) -> float:
         discount = self._membership_discount(inv.membership, subtotal)
-        if discount == 0.0 and inv.membership not in self.DISCOUNT_MEMBERS:
+        if discount <= 0.0 and inv.membership not in self.DISCOUNT_MEMBERS:
             discount += self._bulk_discount(subtotal)
 
         discount += self._coupon_discount(inv.coupon, subtotal, warnings)
